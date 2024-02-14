@@ -1,5 +1,91 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+    /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+}
+
+h1 {
+    text-shadow: 4px 4px #FF0070;
+    font-weight: 700;
+    font-size: 157px;
+    line-height: 130px;
+    color: #DB00FF;
+    margin-top: 273px;
+    align-self: start;
+}
+
+h2 {
+    color: #FF0070;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+h3 {
+    color: #000028;
+    font-size: 18px;
+    font-weight: 700;
+    background: #FF0070;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 400;
+    color: #F1B2CE;
+}
+
+.header__theme-menu-button {
+    background: transparent;
+    border: none;
+}
+
+.header {
+    background-image: url("../images/cover-image-dark.png");
+    background-size: cover;
+    width: 1024px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 134px;
+}
+
+.header__theme-menu {
+    padding: 20px;
+}
+
+.header__theme-menu-list {
+    color: #FF0070;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.undertitle {
+    font-weight: 700;
+    line-height: 23.4px;
+    margin-top: 114px;
+    width: 491px;
+    align-self: end;
+}
+
+
+main {
+    padding: 60px 20px;
+}
+
+
+
+.first {
+    display: flex;
+    flex-direction: row;
+}
+
+.second {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.words__list {
+    display: flex;
+    flex-direction: column;
+    width: 649px;
 }
