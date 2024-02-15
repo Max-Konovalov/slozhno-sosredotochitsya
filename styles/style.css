@@ -2,68 +2,162 @@
 
 .page {
     /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+    background: var(--background-color);
 }
 
-h1 {
-    text-shadow: 4px 4px #FF0070;
-    font-weight: 700;
-    font-size: 157px;
-    line-height: 130px;
-    color: #DB00FF;
+.header__title {
     margin-top: 273px;
     align-self: start;
+}
+
+.title {
+    text-shadow: 4px 4px #FF0070;
+    color: #DB00FF;
+    font-weight: var(--bold-font);
+    font-size: 157px;
+    line-height: 130px;
 }
 
 h2 {
     color: #FF0070;
     font-size: 18px;
-    font-weight: 700;
+    font-weight: var(--bold-font);
 }
 
 h3 {
-    color: #000028;
+    color: var(--background-color);
     font-size: 18px;
-    font-weight: 700;
-    background: #FF0070;
+    font-weight: var(--bold-font);
+    background: var(--main-color);
+    line-height: 24px;
 }
+
+.header__text {
+    margin-top: 114px;
+    width: 491px;
+    align-self: end;
+}
+
+h4 {
+    color: var(--background-color);
+    font-weight: var(--regular-font);
+    background: var(--main-color);
+    font-size: 18px;
+    line-height: 24px;
+}
+
+section h3 {
+    margin-bottom: 10px;
+}
+
 
 p {
     font-size: 18px;
-    font-weight: 400;
+    font-weight: var(--regular-font);
+    line-height: 24px;
+}
+
+
+section p {
     color: #F1B2CE;
 }
 
+a {
+    text-shadow: 2px 2px #FF0070;
+    text-decoration: none;
+}
+
 .header__theme-menu-button {
+    font-family: var(--font-family);
+    font-size: 18px;
     background: transparent;
-    border: none;
+    border: transparent solid 1px;
+    width: 70px;
+    height: 26px;
+    display: flex;
+    line-height: 18px;
+    justify-content: center;
+    align-content: center;
+}
+
+.header__theme-menu-button_active {
+    border: var(--main-color) solid 1px;
 }
 
 .header {
     background-image: url("../images/cover-image-dark.png");
     background-size: cover;
+    background-position: center;
     width: 1024px;
     display: flex;
     flex-direction: column;
-    padding-bottom: 134px;
+    padding: 20px 20px 134px 0;
+    position: relative;
 }
 
 .header__theme-menu {
-    padding: 20px;
-}
-
-.header__theme-menu-list {
-    color: #FF0070;
+    padding-left: 20px;
+    width: 100%;
     display: flex;
-    flex-direction: row;
     justify-content: center;
 }
 
-.undertitle {
-    font-weight: 700;
-    line-height: 23.4px;
-    margin-top: 114px;
-    width: 491px;
-    align-self: end;
+.header__theme-menu-list {
+    color: var(--main-color);
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.rectangle {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.square {
+    width: 25px;
+    height: 25px;
+}
+
+.square-top {
+    align-self: flex-end;
+    border-top: var(--main-color) solid 1px;
+    border-right: var(--main-color) solid 1px;
+}
+
+.square-bottom {
+    align-self: flex-start;
+    border-bottom: var(--main-color) solid 1px;
+    border-left: var(--main-color) solid 1px;
+
+}
+
+.bulb {
+    top: 20px;
+    right: 29px;
+    position: absolute;
+    color: var(--main-color);
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.circle {
+    align-self: center;
+    background: var(--main-color);
+    border-radius: 50%;
+    box-shadow: 0px 0px 4px 2px var(--main-color);
+    height: 9px;
+    width: 9px;
 }
 
 
@@ -71,21 +165,77 @@ main {
     padding: 60px 20px;
 }
 
+.block__title {
+
+}
+
+.content__title {
+    padding-bottom: 20px;
+}
+
+.text__title {
+    padding-bottom: 10px;
+
+}
 
 
-.first {
+.section__content {
     display: flex;
     flex-direction: row;
 }
 
-.second {
-    display: flex;
-    flex-direction: column;
+.second h3 {
+    font-weight: var(--bold-font);
 }
 
+.sunset {
+    grid-area: sunset;
+}
+
+.ice-cream {
+    grid-area: ice-cream;
+}
+
+.books {
+    grid-area: books;
+}
+
+.tape {
+    grid-area: tape;
+}
+
+.street {
+    grid-area: street;
+}
 
 .words__list {
     display: flex;
     flex-direction: column;
     width: 649px;
+}
+
+.images-grid {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 315px);
+    gap: 20px;
+    grid-template-areas:
+    "sunset sunset ice-cream"
+    "tape books ice-cream"
+    "tape street street"
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+footer {
+    padding: 319px 276px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
