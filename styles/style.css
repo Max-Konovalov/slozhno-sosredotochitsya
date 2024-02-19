@@ -395,6 +395,10 @@ footer .title {
         gap: 10px;
     }
 
+    img {
+        display: block;
+    }
+
     footer {
 
         align-content: center;
