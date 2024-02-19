@@ -13,8 +13,9 @@
     --accent-color: #ff0070;
     --text-color: #F1B2CE;
     --bulb-state: flex;
-    --squre-color: var(--accent-color);
-    --title-text-color: var(--main-color);
+    --title-decor-color: var(--main-color);
+    --title-text-color: var(--accent-color);
+
 }
 
 /*@media (prefers-color-scheme: dark) {*/

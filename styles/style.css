@@ -33,10 +33,7 @@ p {
 }
 
 .header__text {
-    color: var(--title-text-color);
-    font-size: 18px;
     font-weight: var(--bold-font);
-    background: var(--accent-color);
     line-height: 24px;
     margin-top: 114px;
     width: 491px;
@@ -63,11 +60,11 @@ p {
     line-height: 18px;
     justify-content: center;
     align-content: center;
-    color: var(--squre-color);
+    color: var(--title-text-color);
 }
 
 .header__theme-menu-button_active {
-    border: var(--squre-color) solid 1px;
+    border: var(--title-text-color) solid 1px;
 }
 
 .header {
@@ -82,12 +79,19 @@ p {
     z-index: 0;
 }
 
+.title-decor {
+    background: var(--accent-color);
+    color: var(--title-decor-color);
+    background: var(--accent-color);
+    font-size: 18px;
+}
+
 .header::before, .header::after, footer::after, footer::before {
     content: "";
     width: 25px;
     height: 25px;
     position: absolute;
-    border: 1px solid var(--squre-color);
+    border: 1px solid var(--title-text-color);
 
 }
 
@@ -182,20 +186,17 @@ main {
 
 .content__container_header {
     margin-bottom: 20px;
-    color: var(--accent-color);
+    color: var(--title-text-color)
 }
 
 .text__container__header {
-    color: var(--title-text-color);
     font-weight: var(--bold-font);
     background: var(--accent-color);
     font-size: 18px;
 }
 
 .text__container__title {
-    color: var(--title-text-color);
     font-weight: var(--bold-font);
-    background: var(--accent-color);
     font-size: 18px;
     margin-bottom: 10px;
 }

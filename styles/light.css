@@ -15,7 +15,7 @@
     --accent-color: #FF8DCB;
     --text-color: #353430;
     --bulb-state: none;
-    --squre-color: var(--text-color);
+    --title-decor-color: var(--text-color);
     --title-text-color: var(--text-color);
     /* сохраните этот селектор в приведённом виде.
       Так стили написанные ниже будут иметь больший вес,
@@ -30,8 +30,8 @@
         --main-color: #FFF1F7;
         --accent-color: #FF8DCB;
         --text-color: #353430;
-        --title-text-color: var(--text-color);
         --bulb-state: none;
-        --squre-color: var(--text-color);
+        --title-decor-color: var(--text-color);
+        --title-text-color: var(--text-color);
     }
 }
