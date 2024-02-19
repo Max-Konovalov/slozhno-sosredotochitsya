@@ -319,8 +319,6 @@ footer .title {
         height: 100vh;
     }
 
-    footer .title {
-    }
 }
 
 @media (width <= 375px) {
