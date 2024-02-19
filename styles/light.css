@@ -4,10 +4,6 @@
   переключая тему
 */
 
-.bulb {
-    display: none;
-}
-
 .page.theme_light {
     --background-image: url("../images/cover-image-light.png");
     --header-text-color: #FFC2E6;
