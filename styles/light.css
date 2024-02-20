@@ -13,6 +13,7 @@
     --bulb-state: none;
     --title-decor-color: var(--text-color);
     --title-text-color: var(--text-color);
+    --button-hover-color: #32312D66;;
     /* сохраните этот селектор в приведённом виде.
       Так стили написанные ниже будут иметь больший вес,
       чем стили в медиазапросе предпочтений пользователя
@@ -29,5 +30,6 @@
         --bulb-state: none;
         --title-decor-color: var(--text-color);
         --title-text-color: var(--text-color);
+        --button-hover-color: #32312D66;
     }
 }

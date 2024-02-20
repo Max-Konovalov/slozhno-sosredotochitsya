@@ -6,17 +6,15 @@
     /*background: var(--main-color);*/
     background-attachment: fixed;
     background-image: var(--background-image);
-    background-position: top;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .header {
-    background-size: cover;
-    background-position: center;
     height: 100vh;
     display: grid;
-    grid-template-rows: 0.5fr 2.3fr 2fr;
+    grid-template-rows: repeat(3, 1fr);
     padding: 20px 20px 0 0;
     position: relative;
     z-index: 0;
@@ -24,7 +22,6 @@
 
 .header__theme-menu {
     padding-left: 20px;
-    width: 100%;
     display: flex;
     justify-content: center;
     z-index: 2;
@@ -49,6 +46,15 @@
     justify-content: center;
     align-content: center;
     color: var(--title-text-color);
+    outline: none;
+}
+
+.header__theme-menu-button:hover {
+    border: 1px solid var(--button-hover-color);
+}
+
+.header__theme-menu-button:focus-visible {
+    border-bottom: solid 1px var(--title-text-color);
 }
 
 .header__theme-menu-button_active {
@@ -56,8 +62,8 @@
 }
 
 .header__title {
-    align-self: end;
-    padding-bottom: 8px;
+    align-self: center;
+    padding-bottom: 20px;
 }
 
 .title {
@@ -71,8 +77,8 @@
 .header__text {
     font-weight: var(--bold-font);
     width: 491px;
-    margin-bottom: 28px;
-    align-self: center;
+    margin-top: 44px;
+    align-self: start;
     justify-self: end;
 }
 
@@ -84,31 +90,38 @@
 .link {
     text-shadow: 2px 2px var(--accent-color);
     text-decoration: none;
+    outline: none;
+}
+
+.link:hover {
+    border-bottom: 1px solid var(--text-color);
+}
+
+.link:focus-visible {
+    outline: 1px solid var(--text-color);
 }
 
 .title-decor {
     background: var(--accent-color);
     color: var(--title-decor-color);
-    font-size: 18px;
 }
 
-.header::before, .header::after, footer::after, footer::before {
+.decorated__zone::before, .decorated__zone::after {
     content: "";
     width: 25px;
     height: 25px;
     position: absolute;
     border: 1px solid var(--title-text-color);
-
 }
 
-.header::after, footer::after {
+.decorated__zone::after {
     top: 20px;
     right: 20px;
     border-left: none;
     border-bottom: none;
 }
 
-.header::before, footer::before {
+.decorated__zone::before {
     bottom: 20px;
     left: 20px;
     border-right: none;
@@ -240,7 +253,7 @@ img {
     display: block;
 }
 
-footer {
+.footer {
     height: 100vh;
     position: relative;
     display: flex;
@@ -248,7 +261,7 @@ footer {
     align-items: center;
 }
 
-footer .title {
+.footer .title {
     padding-top: 9px;
     text-shadow: 2px 2px var(--accent-color);
     align-self: center;
@@ -257,12 +270,14 @@ footer .title {
 
 @media (width <= 768px) {
 
-    .header {
-        grid-template-rows: 1.3fr 1.9fr 1.4fr;
+    .title {
+        line-height: 99px;
+        padding-top: 15px;
     }
 
     .header__theme-menu {
-        padding-bottom: 12px;
+        align-self: end;
+        padding: 0 0 65px 0;
         justify-content: end;
     }
 
@@ -272,18 +287,14 @@ footer .title {
     }
 
     .header__title {
+        margin-bottom: 10px;
         align-self: center;
-    }
-
-    .title {
-        line-height: 99px;
-        padding-top: 15px;
     }
 
     .header__text {
         align-self: start;
+        margin-top: 35px;
         width: 364px;
-        margin-top: 5px;
     }
 
     .main {
@@ -313,20 +324,19 @@ footer .title {
 
 }
 
-@media (width <= 375px) {
+@media (width <= 560px) {
 
     .header {
         padding: 10px;
-        grid-template-rows: repeat(3, 1fr);
     }
 
     .header__theme-menu {
-        padding-top: 28px;
+        padding: 14px 0 0 0;
         align-self: center;
     }
 
     .header__title {
-        margin-bottom: 3px;
+        padding-bottom: 5px;
     }
 
     .title {
@@ -337,18 +347,18 @@ footer .title {
     .header__text {
         justify-self: center;
         align-self: center;
-        margin-bottom: 20px;
+        margin: 0 0 16px 0;
         width: 355px;
     }
 
-    .header::after, footer::after {
+    .decorated__zone::after {
         top: 10px;
         right: 10px;
         border-left: none;
         border-bottom: none;
     }
 
-    .header::before, footer::before {
+    .decorated__zone::before {
         bottom: 10px;
         left: 10px;
         border-right: none;
@@ -388,7 +398,7 @@ footer .title {
         gap: 10px;
     }
 
-    footer {
+    .footer {
         align-content: center;
         justify-content: center;
         padding: 0;

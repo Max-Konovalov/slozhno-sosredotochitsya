@@ -15,5 +15,6 @@
     --bulb-state: flex;
     --title-decor-color: var(--main-color);
     --title-text-color: var(--accent-color);
+    --button-hover-color: #FF007066;
 }
 
