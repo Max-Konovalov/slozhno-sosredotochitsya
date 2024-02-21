@@ -106,26 +106,29 @@
     color: var(--title-decor-color);
 }
 
-.decorated__zone::before, .decorated__zone::after {
+/*Не понял абсолютно комментария по этому место, сделал как подсказал наставник в пачке*/
+/*На деле, мне кажется, это просто шило на мыло, во всех компаниях по сути свой код-стайл и у себя*/
+/*я бы реализовал эти уголки через абсолютные блоки, у которых был бы общий класс и индивидуальный*/
+.decorated__zone::after {
     content: "";
     width: 25px;
     height: 25px;
-    position: absolute;
-    border: 1px solid var(--title-text-color);
-}
-
-.decorated__zone::after {
     top: 20px;
     right: 20px;
-    border-left: none;
-    border-bottom: none;
+    position: absolute;
+    border-top: 1px solid var(--title-text-color);
+    border-right: 1px solid var(--title-text-color);;
 }
 
 .decorated__zone::before {
+    content: "";
+    width: 25px;
+    height: 25px;
     bottom: 20px;
     left: 20px;
-    border-right: none;
-    border-top: none;
+    position: absolute;
+    border-bottom: 1px solid var(--title-text-color);
+    border-left: 1px solid var(--title-text-color);
 }
 
 .bulb {
