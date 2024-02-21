@@ -51,6 +51,7 @@
 
 .header__theme-menu-button:hover {
     border: 1px solid var(--button-hover-color);
+    cursor: pointer;
 }
 
 .header__theme-menu-button:focus-visible {
@@ -95,6 +96,7 @@
 
 .link:hover {
     border-bottom: 1px solid var(--text-color);
+    cursor: pointer;
 }
 
 .link:focus-visible {
